@@ -20,6 +20,7 @@ public class StudentController {
     }
 
     @GetMapping("/all")
+    @CrossOrigin
     public ResponseEntity<List<Student>> getAllStudent() {
         List<Student> students = studentService.fetchStudentList();
         return new ResponseEntity<>(students, HttpStatus.OK);
